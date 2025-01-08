@@ -2317,38 +2317,38 @@ if (IS_HEADER) {
 }
 
 // Script để hạn chế mở DevTools
-(function () {
-  // Ngăn mở DevTools bằng cách phát hiện phím F12 hoặc Ctrl+Shift+I
-  document.addEventListener("keydown", function (event) {
-    if (
-      event.key === "F12" ||
-      (event.ctrlKey && event.shiftKey && event.key === "I") ||
-      (event.ctrlKey && event.shiftKey && event.key === "J") ||
-      (event.ctrlKey && event.key === "U")
-    ) {
-      event.preventDefault();
-    }
-  });
+// (function () {
+//   // Ngăn mở DevTools bằng cách phát hiện phím F12 hoặc Ctrl+Shift+I
+//   document.addEventListener("keydown", function (event) {
+//     if (
+//       event.key === "F12" ||
+//       (event.ctrlKey && event.shiftKey && event.key === "I") ||
+//       (event.ctrlKey && event.shiftKey && event.key === "J") ||
+//       (event.ctrlKey && event.key === "U")
+//     ) {
+//       event.preventDefault();
+//     }
+//   });
 
-  // Ngăn nhấn chuột phải (thường mở menu ngữ cảnh)
-  document.addEventListener("contextmenu", function (event) {
-    event.preventDefault();
-  });
+//   // Ngăn nhấn chuột phải (thường mở menu ngữ cảnh)
+//   document.addEventListener("contextmenu", function (event) {
+//     event.preventDefault();
+//   });
 
-  // Giám sát kích thước cửa sổ để phát hiện mở DevTools
-  const detectDevTools = function () {
-    if (
-      window.outerWidth - window.innerWidth > 100 ||
-      window.outerHeight - window.innerHeight > 100
-    ) {
-      alert("Vui lòng không sử dụng DevTools!");
-      window.close(); // Có thể thay bằng hành động khác
-    }
-  };
+//   // Giám sát kích thước cửa sổ để phát hiện mở DevTools
+//   const detectDevTools = function () {
+//     if (
+//       window.outerWidth - window.innerWidth > 100 ||
+//       window.outerHeight - window.innerHeight > 100
+//     ) {
+//       alert("Vui lòng không sử dụng DevTools!");
+//       window.close(); // Có thể thay bằng hành động khác
+//     }
+//   };
 
-  window.addEventListener("resize", detectDevTools);
-  detectDevTools();
-})();
+//   window.addEventListener("resize", detectDevTools);
+//   detectDevTools();
+// })();
 
 // Tạo và hiển thị popup bằng JavaScript
 function createPopup() {
