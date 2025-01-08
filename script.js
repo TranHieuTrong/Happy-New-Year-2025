@@ -2316,7 +2316,6 @@ if (IS_HEADER) {
   }, 0);
 }
 
-// Script để hạn chế mở DevTools
 // (function () {
 //   // Ngăn mở DevTools bằng cách phát hiện phím F12 hoặc Ctrl+Shift+I
 //   document.addEventListener("keydown", function (event) {
@@ -2350,12 +2349,9 @@ if (IS_HEADER) {
 //   detectDevTools();
 // })();
 
-// Tạo và hiển thị popup bằng JavaScript
 function createPopup() {
-  // Kiểm tra nếu popup đã tồn tại thì không tạo thêm
   if (document.getElementById("customPopup")) return;
 
-  // Tạo overlay
   const overlay = document.createElement("div");
   overlay.className = "popup-overlay";
   overlay.style.position = "fixed";
@@ -2367,7 +2363,6 @@ function createPopup() {
   overlay.style.zIndex = 999;
   overlay.style.display = "none";
 
-  // Tạo popup
   const popup = document.createElement("div");
   popup.id = "customPopup";
   popup.style.position = "fixed";
@@ -2381,32 +2376,27 @@ function createPopup() {
   popup.style.textAlign = "center";
   popup.style.zIndex = 1000;
 
-  // Thêm nội dung popup
   popup.innerHTML = `
     <h2 style="margin: 0; font-size: 20px; color: #333;">Thông báo</h2>
     <p style="margin: 10px 0; font-size: 16px; color: #666;">Tính năng này đã bị vô hiệu hóa!</p>
     <button style="background-color: #007bff; color: white; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer;">Đóng</button>
   `;
 
-  // Thêm sự kiện đóng popup
   popup.querySelector("button").onclick = function () {
     overlay.style.display = "none";
     popup.style.display = "none";
   };
 
-  // Thêm popup và overlay vào body
   document.body.appendChild(overlay);
   document.body.appendChild(popup);
 }
 
-// Hiển thị popup
 function showPopup() {
   createPopup();
   document.querySelector(".popup-overlay").style.display = "block";
   document.getElementById("customPopup").style.display = "block";
 }
 
-// Chặn Ctrl+U
 document.addEventListener("keydown", function (event) {
   if (event.ctrlKey && event.key === "u") {
     event.preventDefault();
@@ -2414,7 +2404,6 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-// Chặn F12
 document.addEventListener("keydown", function (event) {
   if (event.key === "F12") {
     event.preventDefault();
@@ -2422,7 +2411,6 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-// Chặn chuột phải
 document.addEventListener("contextmenu", function (event) {
   event.preventDefault();
   showPopup();
