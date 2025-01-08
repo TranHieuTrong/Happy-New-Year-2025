@@ -2,7 +2,7 @@
 
 [![Website](https://img.shields.io/badge/Live-Demo-brightgreen)](https://tranhieutrong.github.io/Happy-New-Year-2025/)
 
-## 🎇 REUP by TranHieuTrong (HChong)
+## REUP by TranHieuTrong (HChong)
 
 ## 🎇 Happy New Year 2025!
 
