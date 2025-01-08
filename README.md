@@ -2,6 +2,8 @@
 
 [![Website](https://img.shields.io/badge/Live-Demo-brightgreen)](https://tranhieutrong.github.io/Happy-New-Year-2025/)
 
+## 🎇 REUP by TranHieuTrong (HChong)
+
 ## 🎇 Happy New Year 2025!
 
 Đây là một trải nghiệm web thú vị và tương tác, nơi bạn có thể thưởng thức màn trình diễn pháo hoa đầy màu sắc ngay trên trình duyệt của mình.
